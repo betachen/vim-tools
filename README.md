@@ -5,6 +5,8 @@ vim-tools for c11/c++11
 已带除YCM之外的所有插件
 命令安装
 ```bash
+yum/apt-get install ctags
+git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 vi
 :PluginInstall
 ```
