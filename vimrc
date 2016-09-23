@@ -276,7 +276,7 @@ let g:SignatureMap = {
 " 设置 tagbar 子窗口的位置出现在主编辑区的左边
 let tagbar_left=1
 " 设置显示／隐藏标签列表子窗口的快捷键。速记：identifier list by tag
-nnoremap <Leader>ilt :TagbarToggle<CR>
+nnoremap <silent> <F3> :TagbarToggle<CR>
 " 设置标签子窗口的宽度
 let tagbar_width=32
 " tagbar 子窗口中不显示冗余帮助信息
@@ -461,7 +461,7 @@ nmap <Leader>man :Man 3 <cword><CR>
 
 " 使用 NERDTree 插件查看工程文件。设置快捷键，速记：file list
 " nmap <Leader>fl :NERDTreeToggle<CR>
-nnoremap <silent> <F6> :NERDTreeToggle<CR>
+nnoremap <silent> <F4> :NERDTreeToggle<CR>
 " 设置 NERDTree 子窗口宽度
 let NERDTreeWinSize=22
 " 设置 NERDTree 子窗口位置
