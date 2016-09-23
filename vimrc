@@ -99,7 +99,6 @@ Plugin 'terryma/vim-multiple-cursors'
 Plugin 'scrooloose/nerdcommenter'
 Plugin 'vim-scripts/DrawIt'
 Plugin 'SirVer/ultisnips'
-Plugin 'Valloric/YouCompleteMe'
 Plugin 'derekwyatt/vim-protodef'
 Plugin 'scrooloose/nerdtree'
 Plugin 'fholgado/minibufexpl.vim'
@@ -108,6 +107,7 @@ Plugin 'sjl/gundo.vim'
 Plugin 'Lokaltog/vim-easymotion'
 Plugin 'suan/vim-instant-markdown'
 Plugin 'lilydjwg/fcitx.vim'
+Plugin 'Valloric/YouCompleteMe'
 
 " 插件列表结束
 call vundle#end()
@@ -116,7 +116,9 @@ filetype plugin indent on
 
 " 配色方案
 set background=dark
-colorscheme solarized
+colorscheme default
+set t_Co=256
+" let g:solarized_termcolors=256
 "colorscheme molokai
 "colorscheme phd
 
@@ -160,8 +162,8 @@ set ruler
 "set number
 
 " 高亮显示当前行/列
-set cursorline
-"set cursorcolumn
+" set cursorline
+" set cursorcolumn
 
 " 高亮显示搜索结果
 set hlsearch
