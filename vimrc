@@ -1,5 +1,5 @@
 " 定义快捷键的前缀，即 <Leader>
-let mapleader=";"
+let mapleader=" "
 
 " >>
 " 文件类型侦测
@@ -45,7 +45,7 @@ nnoremap <Leader>kw <C-W>k
 nnoremap <Leader>jw <C-W>j
 
 " 定义快捷键在结对符之间跳转
-nmap <Leader>M %
+nmap <Leader>ff %
 
 " <<
 
@@ -53,11 +53,9 @@ nmap <Leader>M %
 autocmd BufWritePost $MYVIMRC source $MYVIMRC
 
 " >>
-" 其他
-set tabstop=4
 
 " 开启实时搜索功能
-set incsearch
+" set incsearch
 
 " 搜索时大小写不敏感
 set ignorecase
@@ -106,7 +104,7 @@ Plugin 'sjl/gundo.vim'
 Plugin 'Lokaltog/vim-easymotion'
 Plugin 'suan/vim-instant-markdown'
 Plugin 'lilydjwg/fcitx.vim'
-Plugin 'Valloric/YouCompleteMe'
+"Plugin 'Valloric/YouCompleteMe'
 
 " 插件列表结束
 call vundle#end()
@@ -167,6 +165,10 @@ set ruler
 " 高亮显示搜索结果
 set hlsearch
 
+set fileencodings=utf-8,gb2312,gbk,gb18030
+set fileformats=unix,dos
+set colorcolumn=80
+
 " <<
 
 " >>
@@ -176,7 +178,7 @@ set hlsearch
 set guifont=YaHei\ Consolas\ Hybrid\ 10.5
 
 " 禁止折行
-set nowrap
+" set nowrap
 
 " 设置状态栏主题风格
 let g:Powerline_colorscheme='solarized256'
@@ -199,13 +201,9 @@ syntax on
 " 自适应不同语言的智能缩进
 filetype indent on
 
-" 将制表符扩展为空格
 set expandtab
-" 设置编辑时制表符占用空格数
 set tabstop=4
-" 设置格式化时制表符占用空格数
 set shiftwidth=4
-" 让 vim 把连续数量的空格视为一个制表符
 set softtabstop=4
 
 " 缩进可视化插件 Indent Guides
@@ -353,8 +351,8 @@ nnoremap <Leader>sp :CtrlSF<CR>
 " 内容替换
 
 " 快捷替换
-let g:multi_cursor_next_key='<S-n>'
-let g:multi_cursor_skip_key='<S-k>'
+let g:multi_cursor_next_key='<C-n>'
+let g:multi_cursor_skip_key='<C-k>'
 
 " 精准替换
 " 替换函数。参数说明：
@@ -481,8 +479,8 @@ let NERDTreeAutoDeleteBuffer=1
 map <Leader>bl :MBEToggle<cr>
 
 " buffer 切换快捷键
-map <Leader>pp :MBEbn<cr>
-map <Leader>oo :MBEbp<cr>
+map <Leader>k :MBEbn<cr>
+map <Leader>j :MBEbp<cr>
 
 " <<
 
@@ -515,8 +513,8 @@ nmap <Leader>g :wa<CR>:cd build/<CR>:!rm -rf main<CR>:!cmake CMakeLists.txt<CR>:
 " 快速选中结对符内的文本
  
 " 快捷键
-map <SPACE> <Plug>(wildfire-fuel)
-vmap <S-SPACE> <Plug>(wildfire-water)
+map <;> <Plug>(wildfire-fuel)
+vmap <;> <Plug>(wildfire-water)
 
 " 适用于哪些结对符
 let g:wildfire_objects = ["i'", 'i"', "i)", "i]", "i}", "i>", "ip"]
