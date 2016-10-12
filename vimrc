@@ -1,5 +1,3 @@
-" 更新时间：2016-03-30 12:15:21
-
 " 定义快捷键的前缀，即 <Leader>
 let mapleader=";"
 
@@ -56,6 +54,7 @@ autocmd BufWritePost $MYVIMRC source $MYVIMRC
 
 " >>
 " 其他
+set tabstop=4
 
 " 开启实时搜索功能
 set incsearch
